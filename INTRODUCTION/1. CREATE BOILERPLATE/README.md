@@ -1,6 +1,4 @@
 # Create a NODE Js FIle
-#
-#
 
 #### 1. Right Click in the folder you want to create the node js folder in
 #
