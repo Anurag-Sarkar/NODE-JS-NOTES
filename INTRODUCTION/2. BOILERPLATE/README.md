@@ -54,16 +54,16 @@
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'jade');
 
-`app.use(logger('dev'));`
 **It tells app to use logger in dev mode**
-`app.use(express.json());` 
+`app.use(logger('dev'));`
 **It tells app to use to parse data in JSON format for POST request**
-`app.use(express.urlencoded({ extended: false }));` 
+`app.use(express.json());` 
 **It tells app to use to parse data in encoded format for POST form data**
-`app.use(cookieParser());` 
+`app.use(express.urlencoded({ extended: false }));` 
 **It tells app to use cookie parser to parse cookies**
-`app.use(express.static(path.join(__dirname, 'public')));` 
+`app.use(cookieParser());` 
 **It tells app to use public folder for images, stylesheets and javascript files**
+`app.use(express.static(path.join(__dirname, 'public')));` 
 
 ##### **It redirects all "/" routes to indexRouter page**
 ##### **It redirects all "/user" routes to userRouter page**
