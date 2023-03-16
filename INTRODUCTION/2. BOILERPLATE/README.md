@@ -40,15 +40,15 @@
     var path = require('path');
     var cookieParser = require('cookie-parser');
     var logger = require('morgan');
-
+#
 ##### **indexRouter is a variable where the index.js file location is saved**
 ##### **usersRouter is a variable where the index.js file location is saved**
     var indexRouter = require('./routes/index');
     var usersRouter = require('./routes/users');
-
+#
 ##### **We save express functions in a variable called app**
 `var app = express();`
-
+#
 ##### **We set the views folder to the location of views folder**
 ##### **We set view engine to use EJS**
     app.set('views', path.join(__dirname, 'views'));
@@ -58,46 +58,44 @@
 
 `app.use(logger('dev'));`
 
-**It tells app to use logger in dev mode**
+##### **It tells app to use logger in dev mode**
 
 `app.use(express.json());` 
 
-**It tells app to use to parse data in JSON format for POST request**
+##### **It tells app to use to parse data in JSON format for POST request**
 
 `app.use(express.urlencoded({ extended: false }));` 
 
-**It tells app to use to parse data in encoded format for POST form data**
+##### **It tells app to use to parse data in encoded format for POST form data**
 
 `app.use(cookieParser());` 
 
-**It tells app to use cookie parser to parse cookies**
+##### **It tells app to use cookie parser to parse cookies**
 
 `app.use(express.static(path.join(__dirname, 'public')));` 
 
-**It tells app to use public folder for images, stylesheets and javascript files**
-
-
+##### **It tells app to use public folder for images, stylesheets and javascript files**
+#
 ##### **It redirects all "/" routes to indexRouter page**
 ##### **It redirects all "/user" routes to userRouter page**
 `app.use('/', indexRouter);`
 `app.use('/users', usersRouter);`
-
+#
 ##### **catch 404 and forward to error handler**
     app.use(function(req, res, next) {
       next(createError(404));
     });
-
-
+#
 ##### **error handler**
 `app.use(function(err, req, res, next) {`
 ##### **set locals, only providing error in development**
   `res.locals.message = err.message;`
   `res.locals.error = req.app.get('env') === 'development' ? err : {};`
-
+#
 ##### **render the error page**
   `res.status(err.status || 500);`
   `res.render('error');`
-
+#
 ##### **exported the app to be used in other files**
 `module.exports = app;`
 
