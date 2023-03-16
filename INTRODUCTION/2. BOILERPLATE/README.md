@@ -55,18 +55,23 @@
     app.set('view engine', 'jade');
 
 **It tells app to use logger in dev mode**
+
 `app.use(logger('dev'));`
 
 **It tells app to use to parse data in JSON format for POST request**
+
 `app.use(express.json());` 
 
 **It tells app to use to parse data in encoded format for POST form data**
+
 `app.use(express.urlencoded({ extended: false }));` 
 
 **It tells app to use cookie parser to parse cookies**
+
 `app.use(cookieParser());` 
 
 **It tells app to use public folder for images, stylesheets and javascript files**
+
 `app.use(express.static(path.join(__dirname, 'public')));` 
 
 ##### **It redirects all "/" routes to indexRouter page**
