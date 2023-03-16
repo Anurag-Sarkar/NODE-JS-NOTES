@@ -1,7 +1,7 @@
 # Understanding NODE Js Structure
 #
 #### 1. bin folder
-- bin folder contains www.js file while in used to initialise the server and tell it to run server on which port
+- bin folder contains www file while in used to initialise the server and tell it to run server on which port
 #
 #### 2.public folder
 - public folder contains all the static files like images stylesheets and javascript
