@@ -18,18 +18,18 @@ Type of EJS tags:
 
 **CORRECT**
 	
-		<% if(condition) {
-			//something
-		<% } else { %>
-			//something
-		<% } %>
+	<% if(condition) {
+		//something
+	<% } else { %>
+		//something
+	<% } %>
 **WRONG**
 
-		<% if(condition) {
-			//something
-		 } else {
-			//something
-		 } %>
+	<% if(condition) {
+		//something
+		} else {
+		//something
+		} %>
 All of the EJS file is kept in the views folder and we have already set the views folder in the aap.js file
 
 # How to render EJS from backend
