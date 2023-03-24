@@ -27,9 +27,9 @@ Type of EJS tags:
 
 	<% if(condition) {
 		//something
-		} else {
+	} else {
 		//something
-		} %>
+	} %>
 All of the EJS file is kept in the views folder and we have already set the views folder in the aap.js file
 
 # How to render EJS from backend
