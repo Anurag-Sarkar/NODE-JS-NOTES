@@ -19,7 +19,7 @@ Here comes an **important** thing to note we need to **specify the name** of the
 now the form know that he need to send this input field value with the name of "age".
 
 ### Backend 
-In the backend we get the data by using the **body** property of data.
+In the backend we get data by using the **body** property of data. 
 
 	router.get('/form-data',  function(req,  res,  next) {
 		console.log(req.body)
